@@ -1,4 +1,4 @@
-![Apex Atom monochrome UI](https://dl.dropboxusercontent.com/u/6396913/Apex/Atom/apex-ui-logo.png)
+![Apex Atom monochrome UI](https://dl.dropboxusercontent.com/u/6396913/Apex/Atom/apex-syntax-logo.png)
 
 ### Installation
 
