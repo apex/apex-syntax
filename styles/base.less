@@ -1,0 +1,163 @@
+@import "syntax-variables";
+
+atom-text-editor, :host {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .lines {
+    .cursor-line {
+      background-color: @syntax-gutter-background-color;
+    }
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @syntax-text-color;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+    border-left: 2px solid;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+}
+
+atom-text-editor .search-results .marker .region,
+:host .search-results .marker .region {
+  // background-color: transparent;
+  border: 1px solid @syntax-result-marker-color;
+}
+
+atom-text-editor .search-results .marker.current-result .region,
+:host .search-results .marker.current-result .region {
+  border: 1px solid @syntax-result-marker-color-selected;
+}
+
+// Primitives
+
+.string {
+  color: @syntax-text-color-light;
+}
+
+// Comments
+
+.comment {
+  color: @syntax-comment-color;
+  background-color: @syntax-comment-background-color;
+}
+
+// Punctuation
+
+.punctuation {
+  &.definition {
+    &.comment {
+      color: @syntax-comment-delim-color;
+    }
+
+    &.bold {
+      color: @syntax-text-color;
+      font-weight: bold;
+    }
+
+    &.italic {
+      color: @syntax-text-color;
+      font-style: italic;
+    }
+  }
+
+  &.section.embedded {
+    color: @syntax-text-color;
+  }
+
+}
+
+// CSS
+
+.source.css {
+  .selector {
+    color: @syntax-text-color-dark;
+    font-weight: bold;
+  }
+
+  .property-value {
+    color: @syntax-text-color-light;
+  }
+}
+
+// Markdown
+
+.source.gfm {
+  .heading.marker {
+    font-weight: normal;
+  }
+
+  .heading {
+    color: @syntax-text-color-dark;
+    font-weight: bold;
+  }
+}
+
+// Misc
+
+.todo,
+.fixme,
+.xxx {
+  color: @syntax-text-color-dark;
+  margin-right: 3px;
+}
+
+// Bracket matcher
+
+.bracket-matcher {
+  border-bottom: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+atom-text-editor::shadow  .bracket-matcher .region {
+  border-bottom: none;
+  background-color: @bracket-match-color;
+  border-bottom: 1px solid darken(@bracket-match-color, 50%);
+}
+
+// Tab coloring
+
+.tab-bar .tab[data-type="TextEditor"]::after {
+  background-color: fade(@white, 15%);
+}

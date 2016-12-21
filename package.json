@@ -1,0 +1,19 @@
+{
+  "name": "apex-syntax",
+  "theme": "syntax",
+  "version": "0.0.1",
+  "description": "Apex monochrome theme syntax inspired by iA Writer",
+  "keywords": [
+    "apex",
+    "monochrome",
+    "syntax",
+    "ia",
+    "writer",
+    "light"
+  ],
+  "repository": "https://github.com/apex/apex-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
