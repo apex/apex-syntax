@@ -8,8 +8,8 @@ $ apm install apex-syntax
 
 ## Badges
 
-![](https://img.shields.io/badge/license-MIT-blue.svg)
 [![](http://apex.sh/images/badge.svg)](https://apex.sh/ping/)
+![](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ---
 
