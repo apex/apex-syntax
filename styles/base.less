@@ -1,6 +1,6 @@
 @import "syntax-variables";
 
-atom-text-editor, :host {
+atom-text-editor,atom-text-editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
 
@@ -58,50 +58,50 @@ atom-text-editor, :host {
   }
 }
 
-atom-text-editor .search-results .marker .region,
-:host .search-results .marker .region {
+atom-text-editor .search-results .syntax--marker .region,
+atom-text-editor .search-results .syntax--marker .region {
   // background-color: transparent;
   border: 1px solid @syntax-result-marker-color;
 }
 
-atom-text-editor .search-results .marker.current-result .region,
-:host .search-results .marker.current-result .region {
+atom-text-editor .search-results .syntax--marker.current-result .region,
+atom-text-editor .search-results .syntax--marker.current-result .region {
   border: 1px solid @syntax-result-marker-color-selected;
 }
 
 // Primitives
 
-.string {
+.syntax--string {
   color: @syntax-text-color-light;
 }
 
 // Comments
 
-.comment {
+.syntax--comment {
   color: @syntax-comment-color;
   background-color: @syntax-comment-background-color;
 }
 
 // Punctuation
 
-.punctuation {
-  &.definition {
-    &.comment {
+.syntax--punctuation {
+  &.syntax--definition {
+    &.syntax--comment {
       color: @syntax-comment-delim-color;
     }
 
-    &.bold {
+    &.syntax--bold {
       color: @syntax-text-color;
       font-weight: bold;
     }
 
-    &.italic {
+    &.syntax--italic {
       color: @syntax-text-color;
       font-style: italic;
     }
   }
 
-  &.section.embedded {
+  &.syntax--section.syntax--embedded {
     color: @syntax-text-color;
   }
 
@@ -109,34 +109,32 @@ atom-text-editor .search-results .marker.current-result .region,
 
 // CSS
 
-.source.css {
-  .selector {
+.syntax--source.syntax--css {
+  .syntax--selector {
     color: @syntax-text-color-dark;
     font-weight: bold;
   }
 
-  .property-value {
+  .syntax--property-value {
     color: @syntax-text-color-light;
   }
 }
 
 // Markdown
 
-.source.gfm {
-  .heading.marker {
-    font-weight: normal;
-  }
+.syntax--source.syntax--gfm.syntax--heading.syntax--marker {
+  font-weight: normal;
+}
 
-  .heading {
-    color: @syntax-text-color-dark;
-    font-weight: bold;
-  }
+.syntax--source.syntax--gfm.syntax--syntax--heading {
+  color: @syntax-text-color-dark;
+  font-weight: bold;
 }
 
 // Misc
 
-.todo,
-.fixme,
+.syntax--todo,
+.syntax--fixme,
 .xxx {
   color: @syntax-text-color-dark;
   margin-right: 3px;
@@ -150,7 +148,7 @@ atom-text-editor .search-results .marker.current-result .region,
   background-color: rgba(0, 0, 0, 0.0);
 }
 
-atom-text-editor::shadow  .bracket-matcher .region {
+atom-text-editor.editor .bracket-matcher .region {
   border-bottom: none;
   background-color: @bracket-match-color;
   border-bottom: 1px solid darken(@bracket-match-color, 50%);
@@ -158,6 +156,6 @@ atom-text-editor::shadow  .bracket-matcher .region {
 
 // Tab coloring
 
-.tab-bar .tab[data-type="TextEditor"]::after {
+tab-bar .syntax--tab[data-type="TextEditor"]::after {
   background-color: fade(@white, 15%);
 }
