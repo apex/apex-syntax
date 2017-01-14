@@ -159,3 +159,12 @@ atom-text-editor.editor .bracket-matcher .region {
 tab-bar .syntax--tab[data-type="TextEditor"]::after {
   background-color: fade(@white, 15%);
 }
+
+// Function defenitions
+.syntax--meta.syntax--function.syntax--method.syntax--definition,
+.syntax--entity.syntax--name.syntax--function,
+.syntax--keyword.syntax--control.syntax--html.syntax--custom.syntax--elements,
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--class,
+.syntax--entity.syntax--name.syntax--type {
+  font-weight: bold;
+}
