@@ -160,11 +160,27 @@ tab-bar .syntax--tab[data-type="TextEditor"]::after {
   background-color: fade(@white, 15%);
 }
 
-// Function defenitions
-.syntax--meta.syntax--function.syntax--method.syntax--definition,
-.syntax--entity.syntax--name.syntax--function,
-.syntax--keyword.syntax--control.syntax--html.syntax--custom.syntax--elements,
-.syntax--entity.syntax--other.syntax--attribute-name.syntax--class,
-.syntax--entity.syntax--name.syntax--type {
+// CSS element
+.syntax--keyword.syntax--control.syntax--html.syntax--custom.syntax--elements {
+  font-weight: bold;
+}
+
+// CSS class
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--class {
+  font-weight: bold;
+}
+
+// Function definition
+.syntax--meta.syntax--function.syntax--method.syntax--definition .syntax--entity.syntax--name.syntax--function {
+  font-weight: bold;
+}
+
+// Go function definition
+.syntax--source.syntax--go .syntax--entity.syntax--name.syntax--function {
+  font-weight: bold;
+}
+
+// Go struct name
+.syntax--entity.syntax--name.syntax--type.syntax--go {
   font-weight: bold;
 }
