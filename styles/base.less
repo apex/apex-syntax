@@ -1,6 +1,6 @@
 @import "syntax-variables";
 
-atom-text-editor,atom-text-editor {
+atom-text-editor, atom-text-editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
 
@@ -122,13 +122,15 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 
 // Markdown
 
-.syntax--source.syntax--gfm.syntax--heading.syntax--marker {
-  font-weight: normal;
-}
+.syntax--source.syntax--gfm {
+  .syntax--heading.syntax--marker {
+    font-weight: normal;
+  }
 
-.syntax--source.syntax--gfm.syntax--syntax--heading {
-  color: @syntax-text-color-dark;
-  font-weight: bold;
+  .syntax--heading {
+    color: @syntax-text-color-dark;
+    font-weight: bold;
+  }
 }
 
 // Misc
@@ -148,7 +150,7 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   background-color: rgba(0, 0, 0, 0.0);
 }
 
-atom-text-editor.editor .bracket-matcher .region {
+atom-text-editor.editor  .bracket-matcher .region {
   border-bottom: none;
   background-color: @bracket-match-color;
   border-bottom: 1px solid darken(@bracket-match-color, 50%);
@@ -156,6 +158,6 @@ atom-text-editor.editor .bracket-matcher .region {
 
 // Tab coloring
 
-tab-bar .syntax--tab[data-type="TextEditor"]::after {
+.tab-bar .syntax--tab[data-type="TextEditor"]::after {
   background-color: fade(@white, 15%);
 }
